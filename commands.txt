@@ -1,0 +1,64 @@
+cd IdeaProjects/TestGit
+
+1)git init
+
+2)git add src
+  git add pom.xml
+  git status
+  git commit -m "Added class Main for printing \"Hello world\""
+
+3)git checkout -b A
+  git add src
+  git status
+  git commit -m "Added class Calculator with Calculator#sum for summing numbers"
+
+  git checkout master
+  git add src
+  git status
+  git commit -m "Added Main#print for printing \"Hello world\""
+
+4)git checkout A
+  git log 
+  git checkout master
+  git cherry-pick e0016a5
+
+5)git checkout -b B
+  git add src
+  git add pom.xml
+  git status
+  git commit -m "Added MessageGetter for reading from files"
+  git checkout master
+  git add src
+  git status
+  git commit -m "Added constant for name of file in Main"
+
+6)git checkout B
+  git rebase master
+
+7)git checkout C
+  git add src
+  git commit -m "Added MessageWriter class"
+  git add src
+  git commit -m "Added MessageWriter#write"	
+
+  git checkout master
+  git reset f30be4f
+  git add src
+  git commit -m "Deleted Main#print and Main#main"
+
+8)git remote add origin https://github.com/DmitrievEgor94/TestGit.git
+  git push origin master
+  git push origin C
+
+10) git pull origin master
+    git add src 
+    git commit -m "Added writing \"Hello world\" in file"
+    git tag -a v1
+    git push origin master
+    git push origin v1
+
+11) git reset --hard 1112cc9
+
+  
+
+  
