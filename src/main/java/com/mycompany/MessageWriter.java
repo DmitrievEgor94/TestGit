@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 
 public class MessageWriter {
 
-    void get(String file, String message) throws FileNotFoundException {
+    void write(String file, String message) throws FileNotFoundException {
 
         try (PrintWriter printWriter = new PrintWriter(new File(file))) {
 
